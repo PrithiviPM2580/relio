@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 export const LEAD_STATUSES = ["New", "Qualified", "Proposal", "Won", "Lost"];
 export const LEAD_PRIORITIES = ["Low", "Medium", "High"];
