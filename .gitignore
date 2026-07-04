@@ -1,0 +1,100 @@
+# =========================
+# Dependencies
+# =========================
+node_modules/
+**/node_modules/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Build Outputs
+# =========================
+dist/
+build/
+out/
+coverage/
+.next/
+.nuxt/
+.svelte-kit/
+.vite/
+
+# =========================
+# Cache
+# =========================
+.cache/
+.parcel-cache/
+.eslintcache
+*.tsbuildinfo
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.iml
+
+# =========================
+# Runtime Files
+# =========================
+*.pid
+*.seed
+*.pid.lock
+
+# =========================
+# Package Managers
+# =========================
+.pnpm-store/
+.npm/
+.yarn/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# =========================
+# Backend Uploads (Optional)
+# =========================
+uploads/
+tmp/
+temp/
+
+# =========================
+# Testing
+# =========================
+.nyc_output/
+coverage/
+
+# =========================
+# Docker (Optional)
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Misc
+# =========================
+*.tgz
+*.gz
