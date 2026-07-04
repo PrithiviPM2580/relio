@@ -1,4 +1,3 @@
-import { token } from "morgan";
 import User from "../models/user.js";
 import { APIError } from "../utils/api-error.js";
 import { asyncHandle } from "../utils/async-handler.js";
