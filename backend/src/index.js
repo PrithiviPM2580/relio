@@ -5,6 +5,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import { connectDB } from "./config/db.js";
 import { errorHandler, notFound } from "./middleware/error-handler.js";
+import authRouter from "./routes/auth.js";
 
 const app = express();
 
@@ -32,6 +33,8 @@ app.get("/health", (_req, res) => {
 		message: "Health is properly working.",
 	});
 });
+
+app.use("/api/auth", authRouter);
 
 app.use(notFound);
 app.use(errorHandler);
