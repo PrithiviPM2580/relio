@@ -6,7 +6,7 @@ import { asyncHandle } from "../utils/async-handler.js";
 export const authenticate = asyncHandle(async (req, _res, next) => {
 	let token;
 
-	const header = req.headers?.authorizations;
+	const header = req.headers?.authorization;
 
 	if (header?.startsWith("Bearer ")) {
 		token = header.split(" ")[1];
