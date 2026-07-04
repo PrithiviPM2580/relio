@@ -1,5 +1,4 @@
-import { APIError } from "@/utils/api-error.js";
-
+import { APIError } from "../utils/api-error.js";
 export const notFound = (req, _res, next) => {
 	const error = new APIError(
 		404,

@@ -26,17 +26,17 @@ app.get("/", (_req, res) => {
 	});
 });
 
-app.use("/health", (_req, res) => {
+app.get("/health", (_req, res) => {
 	return res.json({
 		success: true,
-		message: "Health is proper working.",
+		message: "Health is properly working.",
 	});
 });
 
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 const startServer = async () => {
 	try {
