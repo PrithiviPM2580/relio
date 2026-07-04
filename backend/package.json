@@ -23,6 +23,7 @@
     "morgan": "^1.11.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.2",
     "nodemon": "^3.1.14"
   }
 }
