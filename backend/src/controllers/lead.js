@@ -1,4 +1,3 @@
-import { ApiClient } from "@google/genai/vertex_internal";
 import Lead from "../models/lead.js";
 import { APIError } from "../utils/api-error.js";
 import { asyncHandle } from "../utils/async-handler.js";
