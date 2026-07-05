@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { authenticate } from "../middleware/authenticate.js";
 import {
 	createContact,
 	deleteContact,
@@ -7,6 +6,7 @@ import {
 	getContacts,
 	updateContact,
 } from "../controllers/contact.js";
+import { authenticate } from "../middleware/authenticate.js";
 
 const contactRouter = Router();
 

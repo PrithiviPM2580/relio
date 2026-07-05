@@ -6,8 +6,8 @@ import morgan from "morgan";
 import { connectDB } from "./config/db.js";
 import { errorHandler, notFound } from "./middleware/error-handler.js";
 import authRouter from "./routes/auth.js";
-import leadRouter from "./routes/lead.js";
 import contactRouter from "./routes/contact.js";
+import leadRouter from "./routes/lead.js";
 import noteRouter from "./routes/note.js";
 
 const app = express();
