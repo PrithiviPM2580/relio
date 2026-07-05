@@ -49,7 +49,7 @@ export const createLead = asyncHandle(async (req, res) => {
 export const updateLead = asyncHandle(async (req, res) => {
 	const { owner, ...updates } = req.body;
 
-	const lead = await Lead.findByIdAndUpdate(
+	const lead = await Lead.findOneAndUpdate(
 		{
 			_id: req.params.id,
 			owner: req.user._id,
@@ -67,7 +67,7 @@ export const updateLead = asyncHandle(async (req, res) => {
 });
 
 export const deleteLead = asyncHandle(async (req, res) => {
-	const lead = await Lead.findByIdAndDelete({
+	const lead = await Lead.findOneAndDelete({
 		_id: req.params.id,
 		owner: req.user._id,
 	});

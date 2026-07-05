@@ -1,5 +1,4 @@
 import { Router } from "express";
-import { authenticate } from "../middleware/authenticate.js";
 import {
 	createLead,
 	deleteLead,
@@ -8,6 +7,7 @@ import {
 	reorderLeads,
 	updateLead,
 } from "../controllers/lead.js";
+import { authenticate } from "../middleware/authenticate.js";
 
 const leadRouter = Router();
 
