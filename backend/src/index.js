@@ -9,6 +9,7 @@ import authRouter from "./routes/auth.js";
 import contactRouter from "./routes/contact.js";
 import leadRouter from "./routes/lead.js";
 import noteRouter from "./routes/note.js";
+import taskRouter from "./routes/task.js";
 
 const app = express();
 
@@ -41,6 +42,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/leads", leadRouter);
 app.use("/api/contacts", contactRouter);
 app.use("/api/notes", noteRouter);
+app.use("/api/task", taskRouter);
 
 app.use(notFound);
 app.use(errorHandler);

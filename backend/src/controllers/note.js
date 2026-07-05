@@ -12,6 +12,7 @@ export const getNotes = asyncHandle(async (req, res) => {
 	if (search) filter.search = new RegExp(search, "i");
 
 	const notes = await Note.find(filter)
+		.sort({ pinned: -1, createAt: -1 })
 		.populate("lead", "name company")
 		.populate("contact", "name company");
 
