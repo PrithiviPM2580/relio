@@ -6,6 +6,7 @@ import morgan from "morgan";
 import { connectDB } from "./config/db.js";
 import { errorHandler, notFound } from "./middleware/error-handler.js";
 import aiRouter from "./routes/ai.js";
+import analyticsRouter from "./routes/analytics.js";
 import authRouter from "./routes/auth.js";
 import contactRouter from "./routes/contact.js";
 import leadRouter from "./routes/lead.js";
@@ -45,6 +46,7 @@ app.use("/api/contacts", contactRouter);
 app.use("/api/notes", noteRouter);
 app.use("/api/task", taskRouter);
 app.use("/api/ai", aiRouter);
+app.use("/api/analytics", analyticsRouter);
 
 app.use(notFound);
 app.use(errorHandler);
