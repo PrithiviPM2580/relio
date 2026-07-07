@@ -49,7 +49,7 @@ const contactSchema = new mongoose.Schema(
 	},
 );
 
-contactSchema.index({ name: text, email: "text", company: "text" });
+contactSchema.index({ name: "text", email: "text", company: "text" });
 
 const Contact = mongoose.model("Contact", contactSchema);
 
