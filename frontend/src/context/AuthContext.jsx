@@ -27,21 +27,27 @@ export default function AuthProvider({ children }) {
 			.finally(() => setLoading(false));
 	}, []);
 
-	const persist = (res) => {
+	const persist = useCallback((res) => {
 		localStorage.setItem(TOKEN_KEY, res.token);
 		setUser(res.user);
 		return res.user;
-	};
+	});
 
-	const login = useCallback(async (credentials) => {
-		const res = await authApi.login(credentials);
-		return persist(res);
-	}, []);
+	const login = useCallback(
+		async (credentials) => {
+			const res = await authApi.login(credentials);
+			return persist(res);
+		},
+		[persist],
+	);
 
-	const register = useCallback(async (data) => {
-		const res = await authApi.register(data);
-		return persist(res);
-	}, []);
+	const register = useCallback(
+		async (data) => {
+			const res = await authApi.register(data);
+			return persist(res);
+		},
+		[persist],
+	);
 
 	const logout = useCallback(() => {
 		localStorage.removeItem(TOKEN_KEY);
