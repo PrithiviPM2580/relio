@@ -12,7 +12,7 @@ export const getTasks = asyncHandle(async (req, res) => {
 	if (relatedLead) filter.relatedLead = relatedLead;
 
 	const tasks = await Task.find(filter)
-		.status({ status: 1, dueDate: 1, createAt: -1 })
+		.sort({ status: 1, dueDate: 1, createdAt: -1 })
 		.populate("relatedLead", "name company")
 		.populate("relatedContact", "name company");
 
@@ -43,7 +43,7 @@ export const updatetask = asyncHandle(async (req, res) => {
 		updates.completedAt = null;
 	}
 
-	const task = new Task.findByIdAndUpdate(
+	const task = Task.findOneAndUpdate(
 		{
 			_id: req.params.id,
 			owner: req.user._id,
