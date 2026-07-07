@@ -3,7 +3,7 @@
 /** biome-ignore-all lint/a11y/noStaticElementInteractions: <explanation> */
 /** biome-ignore-all lint/a11y/useButtonType: <explanation> */
 /** biome-ignore-all lint/correctness/useExhaustiveDependencies: <explanation> */
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import {
 	Plus,
@@ -307,7 +307,7 @@ export default function Notes() {
 			.list()
 			.then((res) => setNotes(res.notes))
 			.catch(() => setNotes([]));
-	});
+	}, []);
 
 	useEffect(() => {
 		// eslint-disable-next-line react-hooks/set-state-in-effect
