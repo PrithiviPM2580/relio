@@ -44,7 +44,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/leads", leadRouter);
 app.use("/api/contacts", contactRouter);
 app.use("/api/notes", noteRouter);
-app.use("/api/task", taskRouter);
+app.use("/api/tasks", taskRouter);
 app.use("/api/ai", aiRouter);
 app.use("/api/analytics", analyticsRouter);
 
