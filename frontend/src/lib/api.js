@@ -1,10 +1,14 @@
+/** biome-ignore-all lint/correctness/noUnusedVariables: <explanation> */
 import axios from "axios";
 
 export const TOKEN_KEY = "ttp_crm_token";
 
+// eslint-disable-next-line no-unused-vars
 const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
-const api = axios.create({ baseURL });
+const api = axios.create({
+	baseURL: baseUrl,
+});
 
 api.interceptors.request.use((config) => {
 	const token = localStorage.getItem(TOKEN_KEY);

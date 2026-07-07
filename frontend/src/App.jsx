@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import AppLayout from "./components/layout/AppLayout";
-import ProtectedRoute from "./components/layout/ProtectedRoute";
+import { AppLayout } from "./components/layout/AppLayout";
+import { ProtectedRoute } from "./components/layout/ProtectedRoute";
 
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
@@ -12,6 +12,8 @@ import Notes from "./pages/Notes";
 import Tasks from "./pages/Tasks";
 import Settings from "./pages/Settings";
 
+/* Central route table. Auth routes are public; everything else is wrapped in
+   the authenticated AppLayout behind <ProtectedRoute>. */
 export default function App() {
 	return (
 		<Routes>
